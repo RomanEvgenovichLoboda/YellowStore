@@ -27,6 +27,7 @@
             <TextBlock Style="{StaticResource name}">512GB (Graphite) Dual SIM</TextBlock>
             <TextBlock Style="{StaticResource price}">42 199 грн.</TextBlock>
             <Button Width="50" Height="18" Margin="10,0" HorizontalAlignment="Left"> Купить</Button>
+            <TextBlock Text="{Binding Path=color}"></TextBlock>
         </StackPanel>
     </Border>
 </UserControl>

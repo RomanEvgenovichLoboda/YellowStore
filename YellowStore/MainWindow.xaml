@@ -12,14 +12,20 @@
             <ColumnDefinition Width="3*"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Button Height="20" Width="50" Click="click_Add"> add</Button>
-        <Button Grid.Column="2" Height="20" Width="50" Click="click_Remove">remove</Button>
+        <StackPanel VerticalAlignment="Bottom">
+            <TextBlock>COLOR</TextBlock>
+            <TextBox Text="{Binding Path=text,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <Button Click="click_Add">add</Button>
+            <Button Click="click_Remove">remove</Button>
+        </StackPanel>
+
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
+            
             <Grid Grid.Row="2"  ShowGridLines="False">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition></ColumnDefinition>

@@ -20,10 +20,12 @@ namespace YellowStore.Controls
     /// </summary>
     public partial class ProductControl : UserControl
     {
-        public int id { get; set; }
-        public ProductControl()
+        public string color { get; set; }
+        public ProductControl( string _color)
         {
             InitializeComponent();
+            color = _color;
+            this.DataContext = this;
         }
     }
 }

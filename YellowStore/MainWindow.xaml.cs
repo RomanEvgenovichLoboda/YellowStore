@@ -21,44 +21,54 @@ namespace YellowStore
     /// </summary>
     public partial class MainWindow : Window
     {
+        public string text { get; set; }
         int _id = 0;
         List<ProductControl> mobiles;
         public MainWindow()
         {
             InitializeComponent();
             mobiles = new List<ProductControl>();
-            mobiles.Add(new ProductControl() { id = _id++ });
-            mobiles.Add(new ProductControl() { id = _id++ });
-            mobiles.Add(new ProductControl() { id = _id++ });
-
+            mobiles.Add(new ProductControl("black"));
+            mobiles.Add(new ProductControl("red"));
+            mobiles.Add(new ProductControl("white"));
+            this.DataContext = this;
 
         }
-        private void click_Add(object send,RoutedEventArgs e)
+        void ShowProd()
         {
             ListProd.RowDefinitions.Clear();
             ListProd.Children.Clear();
             int col = 0;
             int row = 0;
-
-            mobiles.Add(new ProductControl() { id = _id++ }); ;
             foreach (var item in mobiles)
             {
                 if (col == 0) { ListProd.RowDefinitions.Add(new RowDefinition()); }
                 Grid.SetColumn(item, col);
                 Grid.SetRow(item, row);
-                
-                ListProd.Children.Add(item); 
+                ListProd.Children.Add(item);
                 col++;
-                if(col >= 4)
+                if (col >= 4)
                 {
                     row++;
                     col = 0;
                 }
             }
         }
+        private void click_Add(object send,RoutedEventArgs e)
+        {
+            mobiles.Add(new ProductControl(text));
+            ShowProd();
+        }
         private void click_Remove(object send, RoutedEventArgs e)
         {
-            
+            ProductControl deletebal = null;
+            foreach (var item in mobiles)
+            {
+                if (item.color.ToLower() == text.ToLower()) { deletebal = item; }
+            }
+
+            if (deletebal != null) { mobiles.Remove(deletebal); }
+            ShowProd();
         }
     }
 }

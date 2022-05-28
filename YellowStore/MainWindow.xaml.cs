@@ -22,7 +22,6 @@ namespace YellowStore
     public partial class MainWindow : Window
     {
         public string text { get; set; }
-        int _id = 0;
         List<ProductControl> mobiles;
         public MainWindow()
         {
@@ -57,11 +56,15 @@ namespace YellowStore
         }
         private void click_Add(object send,RoutedEventArgs e)
         {
-            mobiles.Add(new ProductControl(text));
-            ShowProd();
+            if (text != null)
+            {
+                mobiles.Add(new ProductControl(text));
+                ShowProd();
+            }
         }
         private void click_Remove(object send, RoutedEventArgs e)
-        {if(text!=null)
+        {
+            if(text != null)
             {
                 ProductControl deletebal = null;
                 foreach (var item in mobiles)

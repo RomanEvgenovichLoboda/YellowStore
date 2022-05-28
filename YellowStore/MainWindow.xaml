@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:YellowStore"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="1000">
+        Title="MainWindow" Height="650" Width="1000">
     <Window.Resources>
         <Style TargetType="TextBlock" x:Key="headText">
             <Setter Property="FontSize" Value="10"></Setter>
@@ -23,6 +23,10 @@
             <Setter Property="VerticalAlignment" Value="Center"></Setter>
             <Setter Property="FontSize" Value="12"></Setter>
             <Setter Property="Foreground" Value="DimGray"></Setter>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="category2">
+            <Setter Property="FontSize" Value="12"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
         </Style>
     </Window.Resources>
     <Grid>
@@ -104,14 +108,111 @@
             <Grid Grid.Row="2">
                 <StackPanel>
                     <TextBlock Style="{StaticResource headText}">Главная > Apple > iPhone > iPhone 12 Pro</TextBlock>
-                    <TextBlock Margin="10,0" FontSize="20">iPhone 12 Pro</TextBlock>
+                    <TextBlock Margin="10,0" FontSize="25">iPhone 12 Pro</TextBlock>
                 </StackPanel>
             </Grid>
             <Grid Grid.Row="3"  ShowGridLines="False">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition Width="3*"></ColumnDefinition>
-                  </Grid.ColumnDefinitions>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="1" Style="{StaticResource category2}">Цена</TextBlock>
+                        <Slider Grid.Row="2" Margin="10,0" Background="Yellow"></Slider>
+                        <TextBlock Grid.Row="3" Style="{StaticResource headText}">29849 грн 29849 - 42199 42199 грн</TextBlock>
+                        
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="1" Style="{StaticResource category2}">Встроеная память</TextBlock>
+                        <StackPanel Grid.Row="2" Orientation="Horizontal">
+                            <CheckBox></CheckBox>
+                            <TextBlock Margin="10,0">128Gb (8)</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" Orientation="Horizontal">
+                            <CheckBox></CheckBox>
+                            <TextBlock Margin="10,0">256Gb (8)</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="4" Orientation="Horizontal">
+                            <CheckBox></CheckBox>
+                            <TextBlock Margin="10,0">512Gb (8)</TextBlock>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="1" Style="{StaticResource category2}">Количество SIM карт</TextBlock>
+                        <StackPanel Grid.Row="2" Orientation="Horizontal">
+                            <CheckBox></CheckBox>
+                            <TextBlock Margin="10,0">1 SIM (12)</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" Orientation="Horizontal">
+                            <CheckBox></CheckBox>
+                            <TextBlock Margin="10,0">2 SIM (12)</TextBlock>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Row="3">
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="1" Style="{StaticResource category2}">Цвет</TextBlock>
+                        <StackPanel Grid.Row="2" Orientation="Horizontal">
+                            <CheckBox Background="Blue"></CheckBox>
+                            <TextBlock Margin="10,0">Pacific Blue (6)</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" Orientation="Horizontal">
+                            <CheckBox Background="Silver"></CheckBox>
+                            <TextBlock Margin="10,0">Silver (6)</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="4" Orientation="Horizontal">
+                            <CheckBox Background="Gold"></CheckBox>
+                            <TextBlock Margin="10,0">Gold (6)</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="5" Orientation="Horizontal">
+                            <CheckBox Background="DarkSlateGray"></CheckBox>
+                            <TextBlock Margin="10,0">Graphite (6)</TextBlock>
+                        </StackPanel>
+                    </Grid>
+
+
+
+
+
+
+                </Grid>
                 <ScrollViewer Grid.Column="1">
                     <Grid x:Name="ListProd">
                         <Grid.ColumnDefinitions>

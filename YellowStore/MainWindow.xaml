@@ -32,10 +32,10 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <StackPanel VerticalAlignment="Bottom">
-            <TextBlock>COLOR</TextBlock>
+            <TextBlock Background="DarkSlateBlue" Foreground="Yellow">COLOR</TextBlock>
             <TextBox Text="{Binding Path=text,UpdateSourceTrigger=PropertyChanged}"></TextBox>
-            <Button Click="click_Add">add</Button>
-            <Button Click="click_Remove">remove</Button>
+            <Button Click="click_Add" Background="GreenYellow" Foreground="BlueViolet">Add</Button>
+            <Button Click="click_Remove" Background="IndianRed" Foreground="BlueViolet">Remove</Button>
         </StackPanel>
 
         <Grid Grid.Column="1">

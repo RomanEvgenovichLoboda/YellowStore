@@ -20,7 +20,7 @@
             <Setter Property="Width" Value="150"></Setter>
         </Style>
     </UserControl.Resources>
-    <Border CornerRadius="15" BorderThickness="3" BorderBrush="Wheat" Background="White">
+    <Border CornerRadius="15" BorderThickness="3" BorderBrush="#FFF2F2F2" Background="White">
         <StackPanel >
             <Image Margin="0,20" Height="130" Source="/YellowStore;component/Resorces/graphite.png"></Image>
             <TextBlock Style="{StaticResource name}">Apple iPhone 12 Pro</TextBlock>

@@ -58,12 +58,12 @@
                 <StackPanel Grid.Column="0" Orientation="Horizontal">
                     <Image Source="Resorces/download.png" Width="70"></Image>
                     <Expander Height="40" Header="0 800 210 186" Margin="10,14">
-                        <!--<StackPanel>
+                        <StackPanel>
                             <TextBlock>044 333-63-52</TextBlock>
                             <TextBlock>(066) 731-32-71</TextBlock>
                             <TextBlock>(067) 153-05-08</TextBlock>
                             <TextBlock>(063) 233 49 50</TextBlock>
-                        </StackPanel>-->
+                        </StackPanel>
                     </Expander>
                     <TextBlock Style="{StaticResource headText}" Foreground="Blue">Заказать звонок</TextBlock>
                 </StackPanel>
@@ -101,7 +101,6 @@
                         <TextBlock Grid.Column="4" Style="{StaticResource categoriex}">Телевизоры</TextBlock>
                         <TextBlock Grid.Column="5" Style="{StaticResource categoriex}">Гаджеты</TextBlock>
                         <TextBlock Grid.Column="6" Style="{StaticResource categoriex}">Бытовая техника</TextBlock>
-                        
                     </Grid>
                 </Border>
             </Grid>
@@ -206,12 +205,6 @@
                             <TextBlock Margin="10,0">Graphite (6)</TextBlock>
                         </StackPanel>
                     </Grid>
-
-
-
-
-
-
                 </Grid>
                 <ScrollViewer Grid.Column="1">
                     <Grid x:Name="ListProd">

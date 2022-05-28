@@ -31,8 +31,9 @@ namespace YellowStore
             mobiles.Add(new ProductControl("black"));
             mobiles.Add(new ProductControl("red"));
             mobiles.Add(new ProductControl("white"));
+            mobiles.Add(new ProductControl("blue"));
             this.DataContext = this;
-
+            ShowProd();
         }
         void ShowProd()
         {
@@ -60,15 +61,17 @@ namespace YellowStore
             ShowProd();
         }
         private void click_Remove(object send, RoutedEventArgs e)
-        {
-            ProductControl deletebal = null;
-            foreach (var item in mobiles)
+        {if(text!=null)
             {
-                if (item.color.ToLower() == text.ToLower()) { deletebal = item; }
-            }
+                ProductControl deletebal = null;
+                foreach (var item in mobiles)
+                {
+                    if (item.color.ToLower() == text.ToLower()) { deletebal = item; }
+                }
 
-            if (deletebal != null) { mobiles.Remove(deletebal); }
-            ShowProd();
+                if (deletebal != null) { mobiles.Remove(deletebal); }
+                ShowProd();
+            }
         }
     }
 }

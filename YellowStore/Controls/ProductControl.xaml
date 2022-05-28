@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:YellowStore.Controls"
              mc:Ignorable="d" 
-             d:DesignHeight="350" d:DesignWidth="200">
+             d:DesignHeight="350" d:DesignWidth="200" MaxHeight="350">
     <UserControl.Resources>
         <Style TargetType="TextBlock" x:Key="name">
             <Setter Property="Margin" Value="10,0"></Setter>
@@ -20,14 +20,14 @@
             <Setter Property="Width" Value="150"></Setter>
         </Style>
     </UserControl.Resources>
-    <Border CornerRadius="15" BorderThickness="8" BorderBrush="Green" Background="White">
+    <Border CornerRadius="15" BorderThickness="3" BorderBrush="Wheat" Background="White">
         <StackPanel >
             <Image Margin="0,20" Height="130" Source="/YellowStore;component/Resorces/graphite.png"></Image>
             <TextBlock Style="{StaticResource name}">Apple iPhone 12 Pro</TextBlock>
             <TextBlock Style="{StaticResource name}">512GB (Graphite) Dual SIM</TextBlock>
             <TextBlock Style="{StaticResource price}">42 199 грн.</TextBlock>
-            <Button Width="50" Height="18" Margin="10,0" HorizontalAlignment="Left"> Купить</Button>
-            <TextBlock Text="{Binding Path=color}"></TextBlock>
+            <Button Width="50" Height="18" Margin="10,0" HorizontalAlignment="Left" FontSize="8" FontWeight="DemiBold" HorizontalContentAlignment="Left" Background="Yellow"> Купить</Button>
+            <TextBlock Text="{Binding Path=color}" TextAlignment="Center"></TextBlock>
         </StackPanel>
     </Border>
 </UserControl>

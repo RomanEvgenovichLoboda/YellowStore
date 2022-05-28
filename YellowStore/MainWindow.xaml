@@ -5,11 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:YellowStore"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="1000">
+    <Window.Resources>
+        <Style TargetType="TextBlock" x:Key="headText">
+            <Setter Property="FontSize" Value="10"></Setter>
+            <Setter Property="Foreground" Value="DimGray"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Margin" Value="10,0"></Setter>
+        
+        </Style>
+        <Style TargetType="Image" x:Key="headIco">
+            <Setter Property="Width" Value="20"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="categoriex">
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="FontSize" Value="12"></Setter>
+            <Setter Property="Foreground" Value="DimGray"></Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="12*"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <StackPanel VerticalAlignment="Bottom">
@@ -23,16 +42,78 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            
-            <Grid Grid.Row="2"  ShowGridLines="False">
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="280"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="180"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <Image Source="Resorces/download.png" Width="70"></Image>
+                    <Expander Height="40" Header="0 800 210 186" Margin="10,14">
+                        <!--<StackPanel>
+                            <TextBlock>044 333-63-52</TextBlock>
+                            <TextBlock>(066) 731-32-71</TextBlock>
+                            <TextBlock>(067) 153-05-08</TextBlock>
+                            <TextBlock>(063) 233 49 50</TextBlock>
+                        </StackPanel>-->
+                    </Expander>
+                    <TextBlock Style="{StaticResource headText}" Foreground="Blue">Заказать звонок</TextBlock>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource headText}">Кредит</TextBlock>
+                    <TextBlock Style="{StaticResource headText}">Сервисный центр</TextBlock>
+                    <TextBlock Style="{StaticResource headText}">Акции</TextBlock>
+                    <TextBlock Style="{StaticResource headText}">Блог</TextBlock>
+                    <TextBlock Style="{StaticResource headText}">Контакты</TextBlock>
+                    <TextBlock Style="{StaticResource headText}">Расширенная гарантия</TextBlock>
+                </StackPanel>
+                <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Image Source="Resorces/search_48px.png" Style="{StaticResource headIco}"></Image>
+                    <Image Source="Resorces/user_100px.png" Style="{StaticResource headIco}"></Image>
+                    <Image Source="Resorces/compare_64px.png" Style="{StaticResource headIco}"></Image>
+                    <Image Source="Resorces/bag_100px.png" Style="{StaticResource headIco}"></Image>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Border  CornerRadius="8" Background="#FFF2F2F2" BorderThickness="3" BorderBrush="#FFF2F2F2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Style="{StaticResource categoriex}">Apple</TextBlock>
+                        <TextBlock Grid.Column="1" Style="{StaticResource categoriex}">Смартфоны</TextBlock>
+                        <TextBlock Grid.Column="2" Style="{StaticResource categoriex}">Ноутбуки и ПК</TextBlock>
+                        <TextBlock Grid.Column="3" Style="{StaticResource categoriex}">Фото Аудио PS5</TextBlock>
+                        <TextBlock Grid.Column="4" Style="{StaticResource categoriex}">Телевизоры</TextBlock>
+                        <TextBlock Grid.Column="5" Style="{StaticResource categoriex}">Гаджеты</TextBlock>
+                        <TextBlock Grid.Column="6" Style="{StaticResource categoriex}">Бытовая техника</TextBlock>
+                        
+                    </Grid>
+                </Border>
+            </Grid>
+            <Grid Grid.Row="2">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource headText}">Главная > Apple > iPhone > iPhone 12 Pro</TextBlock>
+                    <TextBlock Margin="10,0" FontSize="20">iPhone 12 Pro</TextBlock>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="3"  ShowGridLines="False">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition Width="3*"></ColumnDefinition>
                   </Grid.ColumnDefinitions>
                 <ScrollViewer Grid.Column="1">
-                    <Grid x:Name="ListProd" ShowGridLines="True">
+                    <Grid x:Name="ListProd">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>

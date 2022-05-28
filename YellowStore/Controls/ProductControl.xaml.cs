@@ -24,6 +24,7 @@ namespace YellowStore.Controls
         public ProductControl( string _color)
         {
             InitializeComponent();
+            Margin = new Thickness(5);
             color = _color;
             this.DataContext = this;
         }

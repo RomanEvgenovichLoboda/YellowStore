@@ -106,5 +106,14 @@
     <Resource Include="Resorces\graphite.png" />
     <Resource Include="Resorces\pasiphicBlue.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resorces\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resorces\bag_100px.png" />
+    <Resource Include="Resorces\compare_64px.png" />
+    <Resource Include="Resorces\search_48px.png" />
+    <Resource Include="Resorces\user_100px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
